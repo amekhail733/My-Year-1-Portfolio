@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Varela Round', sans-serif;
+    animation: 0.7s ease-out 0s 1 slideInFromLeft;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+body{
+    background-image: url('background.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+/* Nav */
+#navLogo{
+    width:50px;
+    height: auto;
+}
+#navText {
+    color: white;
+    transition: 0.3s;
+}
+#navText:hover {
+    color: skyblue;
+    background-color: rgba(87, 87, 87, 0.55);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+/* 	Header	 */
+@keyframes slideInFromLeft {
+    0% {transform: translateX(-50%);}
+    100% {transform: translateX(0);}
+}
+header {
+    background-image: linear-gradient(to right,#ff66ff, #6600cc);
+    width: 100vw;
+    height: 20vh;
+}
+#headText {
+    padding-top: 5vh;
+    text-shadow: 1px 1px white;
+    width: 100vw;
+    height: auto;
+    max-height: 30vh;
+    text-align: center;
+}
+/* main */
+.aboutCont{
+    border-radius: 2px solid black;
+    padding:10px; 
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.aboutCont2{
+    border-radius: 2px solid black;
+}
+#portImg, #schoolImg, #percImg, #otherImg{
+    border: 2px solid black;
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+}
+.carousel-innter{
+    display: flex;
+    justify-content: center;
+}
+/* Footer */
+footer{
+    padding:10px;
+}
+.footerCont{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+.footLink{
+    transition: 0.3s;
+}
+.footLink:hover{
+    transition: 0.3s;
+    color:skyblue;
+}
+#socials{
+    color:white;
+}
+/* Responsive */
+@media only screen and (max-width: 600px){
+    *{
+        font-size:12px;
+    }
+    .footerCont{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+}
+@media only screen and (max-width:800px){
+    .aboutCont2{
+        display: flex;
+        flex-direction: column;
+    }
+}
